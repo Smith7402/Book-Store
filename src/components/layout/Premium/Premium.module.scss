@@ -1,0 +1,136 @@
+@import "@/Common.scss";
+
+.premium {
+  margin-top: 50px;
+
+  .Title {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .premium-banner {
+    background-color: #fdf8ee;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 250px;
+
+    .banner-left {
+      float: left;
+      text-align: left;
+
+      .premium-banner-icon {
+        margin-bottom: -70px;
+      }
+
+      @include mobile() {
+        display: none;
+      }
+
+      @include minTablet() {
+        display: none;
+      }
+    }
+
+    .banner-right {
+      float: right;
+      text-align: left;
+
+      .banner-right-title {
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-weight: 800;
+        color: #050c26;
+
+        .orangeText {
+          color: #ff7426;
+        }
+
+        @include mobile() {
+          text-align: center;
+          margin: 10px;
+        }
+      }
+
+      .banner-right-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-icon {
+          width: 65px;
+          padding: 10px;
+          margin: 7px;
+          background-color: #4d2c5e;
+          border-radius: 17px;
+          height: auto;
+
+          .item-icon-img {
+            @include tablet_lg() {
+              margin-right: 9px;
+              margin-left: 9px;
+            }
+
+            @include tablet() {
+              margin-right: 9px;
+              margin-left: 9px;
+            }
+
+            @include minTablet() {
+              margin-left: 9px;
+              margin-right: 9px;
+            }
+
+            @include mobile() {
+              margin-left: 9px;
+              margin-right: 9px;
+              width: auto;
+              padding-right: 20px !important;
+            }
+          }
+
+          @include tablet() {
+            width: 70px;
+            min-width: 18%;
+            max-width: 20px;
+          }
+
+          @include mobile() {
+            margin: 5px;
+            padding: 10px;
+            width: 76px;
+          }
+        }
+
+        .item-title {
+          color: #050c26;
+          font-weight: bold;
+        }
+        .item-description {
+          color: #8a8a8a;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      @include minTablet() {
+        align-items: center;
+        padding-right: 0 !important;
+        margin: auto;
+      }
+
+      @include tablet() {
+        align-items: center;
+        padding-right: 0 !important;
+        margin: auto;
+      }
+    }
+
+    @include laptop-lg() {
+      padding: 30px 300px;
+    }
+  }
+}

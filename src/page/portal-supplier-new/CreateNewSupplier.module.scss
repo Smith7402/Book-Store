@@ -1,0 +1,131 @@
+.createNewSupplier {
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .supplier-inputs {
+    margin: 10px;
+    background-color: white;
+    border-radius: 3px;
+
+    .label {
+      padding: 10px 0 0 10px;
+      display: block;
+    }
+
+    .contents-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+
+      .contents-item {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        position: relative;
+
+        span {
+          color: red;
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid #acacac;
+          padding: 4px;
+          border-radius: 3px;
+        }
+
+        .custom-select {
+          position: relative;
+          width: 100%;
+
+          select {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+
+          &::after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+          }
+        }
+
+        p {
+          color: #bf1650;
+          position: absolute;
+          bottom: 2px; // Điều chỉnh vị trí của phần tử p khi xuất hiện
+          left: 0;
+          width: 100%;
+          white-space: nowrap; // Ngăn chặn dòng văn bản ngắn ra nhiều dòng
+          transform: translateY(100%);
+        }
+
+        p::before {
+          display: inline;
+          content: "⚠ ";
+        }
+      }
+    }
+  }
+
+  .supplier-footer {
+    position: fixed;
+    width: calc(100% - 220px);
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .supplier-footer-left {
+      button {
+        display: flex;
+        align-items: center;
+        padding: 4px 25px;
+        color: #707070;
+
+        svg {
+          color: #707070;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          color: #000000;
+
+          svg {
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    .supplier-footer-right {
+      display: flex;
+      align-items: center;
+
+      button:nth-of-type(1):hover {
+        background-color: #ff3434 !important;
+        color: white !important;
+      }
+
+      button:nth-of-type(2):hover {
+        background-color: white !important;
+        color: #138300 !important;
+      }
+    }
+  }
+}

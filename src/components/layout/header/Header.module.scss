@@ -1,0 +1,233 @@
+@import "@/Common.scss";
+
+.header {
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  &.header-home {
+    position: absolute;
+    top: 0;
+    left: 195px;
+    right: 195px;
+    z-index: 100;
+
+    @include tablet_lg() {
+      left: 0;
+      right: 0;
+      padding-left: 5px;
+    }
+
+    @include tablet() {
+      left: 0;
+      right: 0;
+      padding-left: 5px;
+    }
+
+    @include minTablet() {
+      left: 0;
+      right: 0;
+      padding-left: 5px;
+    }
+
+    @include mobile() {
+      position: relative;
+    }
+  }
+
+  .btn-open {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+  }
+
+  .nav {
+    list-style: none;
+    display: flex;
+
+    .nav-btn-close {
+      padding: 5px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      visibility: hidden;
+      opacity: 0;
+      font-size: 1.8rem;
+    }
+  }
+
+  .nav li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    .btn-signin {
+      background-color: #4d2c5e;
+      color: white;
+      border-radius: 96px;
+      padding: 8px 30px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #ff7426;
+      }
+
+      @include tablet() {
+        background-color: initial;
+        color: #ff7426;
+
+        &:hover {
+          background-color: initial;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+
+      @include minTablet() {
+        background-color: initial;
+        color: #ff7426;
+        &:hover {
+          background-color: initial;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+
+      @include mobile() {
+        background-color: initial;
+        color: #ff7426;
+
+        &:hover {
+          background-color: initial;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+    }
+
+    @include laptop-lg() {
+      margin: 10px;
+      text-align: center;
+    }
+
+    @include large() {
+      margin: 10px;
+      text-align: center;
+    }
+
+    @include mobile() {
+      margin: 2px;
+      padding-left: 5px;
+      text-align: center;
+    }
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight: bold;
+
+    &:hover {
+      color: #ff7426;
+    }
+  }
+}
+
+@include tablet_lg() {
+  * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@include tablet() {
+  * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .header {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+@include minTablet() {
+  * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+  }
+}
+
+@include mobile() {
+  .nav-btn-close {
+    visibility: visible !important;
+    opacity: 1 !important;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .btn-open {
+    visibility: visible !important;
+    opacity: 1 !important;
+    top: 0;
+    margin-top: 7px;
+    margin-right: 5px;
+  }
+
+  .header ul {
+    position: fixed;
+    top: -100vh;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 1s;
+    z-index: 100;
+    background-color: inherit;
+  }
+
+  .nav {
+    &.responsive-nav {
+      transform: translateY(100vh);
+    }
+  }
+
+  .logo {
+    display: initial;
+    margin-left: 5px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+  }
+
+  .header-home {
+    background-color: #fdf8ee;
+  }
+}

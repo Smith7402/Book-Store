@@ -1,0 +1,125 @@
+@import "@/Common.scss";
+
+.courses {
+  scroll-behavior: smooth;
+
+  .goals {
+    background-color: #4d2c5e;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    border-radius: 10px;
+    margin-top: -80px;
+
+    .goals-item {
+      padding: 30px 20px;
+      align-items: start;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
+      .goals-item-text {
+        display: grid;
+        grid-template-rows: auto auto;
+
+        .goals-item-title {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .goals-item-description {
+          font-size: 13px;
+          opacity: 0.7;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+
+          @include mobile() {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .goals-item-icon {
+        padding: 7px;
+        margin: 7px;
+        background-color: rgba(213, 220, 220, 0.512);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet_lg() {
+          display: none;
+        }
+
+        @include tablet() {
+          display: none;
+        }
+
+        @include minTablet() {
+          display: none;
+        }
+
+        @include mobile {
+          display: flex;
+          padding: 10px;
+          margin-top: 0;
+        }
+      }
+
+      @include tablet_lg() {
+        margin: 10px;
+        padding: 10px;
+        grid-template-columns: auto;
+      }
+
+      @include tablet() {
+        margin: 10px;
+        padding: 10px;
+        grid-template-columns: auto;
+      }
+
+      @include minTablet() {
+        margin: 10px;
+        padding: 10px;
+        grid-template-columns: auto;
+      }
+
+      @include mobile {
+        margin: 10px;
+        padding: 10px;
+        grid-template-columns: 1fr 3fr;
+      }
+    }
+
+    @include tablet_lg() {
+      border-radius: 0;
+    }
+
+    @include tablet() {
+      border-radius: 0;
+    }
+
+    @include mobile() {
+      grid-template-columns: none;
+      border-radius: 0;
+    }
+  }
+
+  .courses-items ul {
+    list-style: none;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile() {
+      display: block;
+    }
+  }
+
+  .courses-items li {
+    margin: 10px;
+  }
+}

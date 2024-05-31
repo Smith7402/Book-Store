@@ -1,0 +1,31 @@
+.CustomInput {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  input {
+    width: 100%;
+    border: 1px solid #acacac;
+    padding: 4px;
+    border-radius: 3px;
+  }
+
+  span {
+    color: red;
+  }
+
+  p {
+    color: #bf1650;
+    position: absolute;
+    bottom: 2px; // Điều chỉnh vị trí của phần tử p khi xuất hiện
+    left: 0;
+    width: 100%;
+    white-space: nowrap; // Ngăn chặn dòng văn bản ngắn ra nhiều dòng
+    transform: translateY(100%);
+  }
+
+  p::before {
+    display: inline;
+    content: "⚠ ";
+  }
+}

@@ -1,0 +1,57 @@
+.portalSeller {
+  height: calc(100% - 50px);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .fillter {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 3px;
+    display: flex;
+
+    .input {
+      flex: 1;
+      display: flex;
+
+      input {
+        border: 1px solid #acacac;
+        padding: 4px;
+        margin-right: 10px;
+        width: 70%;
+        border-radius: 3px;
+        min-width: 0;
+      }
+    }
+
+    .button-group {
+      display: flex;
+    }
+  }
+
+  .seller-container {
+    height: 78.5%;
+    background-color: white;
+    border-radius: 3px;
+    margin: 0 10px 50px 10px;
+    padding: 20px;
+    overflow: auto;
+    font-size: 15px;
+  }
+
+  .footer {
+    background-color: white;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 220px);
+  }
+}
+
+.blue {
+  color: #0054e1;
+}

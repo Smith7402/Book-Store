@@ -1,0 +1,126 @@
+@import "@/Common.scss";
+
+.last-content {
+  .subscribe-form {
+    background-color: #4d2c5e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    margin: 20px 50px 50px 50px;
+
+    .form {
+      margin: 50px;
+    }
+
+    .form-title {
+      font-weight: bold;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .form-description {
+      margin-bottom: 20px;
+    }
+
+    .input {
+      @include tablet_lg() {
+        text-indent: 15px;
+      }
+
+      @include tablet() {
+        text-indent: 15px;
+      }
+    }
+
+    .btn-send {
+      background-color: #ff7426;
+      color: white;
+      border-radius: 96px;
+      padding: 8px 16px;
+      margin-top: 8px;
+      margin-right: 7px;
+      font-weight: bold;
+      width: auto;
+
+      &:hover {
+        background-color: #f9d4ab;
+      }
+
+      @include tablet_lg() {
+        margin-right: -10px;
+        color: #ff7426;
+        background-color: inherit;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+
+      @include tablet() {
+        margin-right: -10px;
+        color: #ff7426;
+        background-color: inherit;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+
+      @include minTablet() {
+        margin-right: -10px;
+        color: #ff7426;
+        background-color: inherit;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+
+      @include mobile() {
+        margin-right: -10px;
+        color: #ff7426;
+        background-color: inherit;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        &:active {
+          color: #1d1d1d;
+        }
+      }
+    }
+
+    @include tablet_lg() {
+      border-radius: 0;
+      margin: 50px 0;
+    }
+  }
+
+  .Professor ul {
+    list-style: none;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+}

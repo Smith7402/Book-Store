@@ -1,0 +1,86 @@
+@import "@/Common.scss";
+
+.professor {
+  margin: 10px;
+}
+
+.professor-item {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+
+  .professor-item-img {
+    @include tablet_lg() {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      border-radius: 33px;
+    }
+
+    @include tablet() {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      border-radius: 33px;
+    }
+
+    @include minTablet() {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      border-radius: 33px;
+    }
+
+    @include mobile() {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      border-radius: 33px;
+    }
+  }
+
+  .professor-item-sub-box1,
+  .professor-item-sub-box2,
+  .professor-item-sub-box4 {
+    @include tablet_lg() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    @include tablet() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    @include minTablet() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    @include mobile() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+
+  .professor-item-sub-box3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    @include tablet_lg() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    @include tablet() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    @include minTablet() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    @include mobile() {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+}

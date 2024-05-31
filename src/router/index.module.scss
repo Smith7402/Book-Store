@@ -1,0 +1,23 @@
+.layout-portal {
+  //   display: flex;
+  //   flex-direction: row;
+  background-color: #f5f5f5;
+  width: 100%;
+  min-height: 100vh;
+
+  .side_bar {
+    width: var(--sidebar);
+    background-color: #ffcd29;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--sidebar);
+  }
+}
